@@ -1,10 +1,19 @@
-variable "dados_yaml" {}
 
+variable "dados_yaml" {}
 locals {
   valores = yamldecode(file(var.dados_yaml))
 }
-
 // output "log" { value = local.valores }
+
+
+
+terraform {
+  backend "local" {
+    path = "../terraform_internos/terraform.tfstate"
+  }
+}
+
+
 
 provider "kubernetes" {
   config_context_cluster  = local.valores.nome_cluster           # qual o cluster que vais ser usado
