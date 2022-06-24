@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment1b
+  labels:
+    app: deployment1b-servico1
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: deploymentba-servico1
+  template:
+    metadata:
+      labels:
+        app: deploymentba-servico1
+    spec:
+      containers:
+      - name: servico1
+        image: servico1:0.9
+        ports:
+          - containerPort: 6000
+        env:
+          - name: PORTO
+            value: "5001"
+          - name: NOME
+            value: "deploymentba_nome_para_testar_servico1"

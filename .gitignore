@@ -1,3 +1,4 @@
 iac/terraform/terraform_internos/
 iac/terraform/codigo_terraform/.terraform/
 iac/terraform/codigo_terraform/.terraform.lock.hcl
+tmp/
