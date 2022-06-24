@@ -21,6 +21,6 @@ spec:
           - containerPort: 6000
         env:
           - name: PORTO
-            value: "5001"
+            value: "6000"
           - name: NOME
             value: "deploymentba_nome_para_testar_servico1"

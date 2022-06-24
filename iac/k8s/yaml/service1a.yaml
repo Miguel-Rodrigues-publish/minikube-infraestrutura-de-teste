@@ -19,5 +19,5 @@ spec:
     # port - port exposed internally in the cluster
     # targetPort - the container port to send requests to
     - nodePort: 30163
-      port: 4000
+      #port: 4000
       targetPort: 5001
