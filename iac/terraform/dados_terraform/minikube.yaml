@@ -1,0 +1,8 @@
+# qual o cluster que nos vamos ligar
+nome_cluster:      "minikube"
+
+# os namespaces que precisamos criar
+meus_namespaces:
+  - "meu-terraform-namespace-1"
+  - "meu-terraform-namespace-2"
+  - "meu-terraform-namespace-3"
